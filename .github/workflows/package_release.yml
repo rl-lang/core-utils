@@ -11,6 +11,7 @@ jobs:
         file:
           - { path: cat/cat.rl, name: cat }
           - { path: ls/ls.rl, name: ls }
+          - { path: echo/echo.rl, name: echo }
     runs-on: ${{ matrix.os }}
     steps:
       - uses: rl-lang/rl-package@main
