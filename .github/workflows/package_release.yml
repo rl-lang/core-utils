@@ -15,7 +15,7 @@ jobs:
       - uses: rl-lang/rl-package@main
         with:
           file: ${{ matrix.file.path }}
-          output: bin/${{ matrix.file.name }}
+          output: ${{ matrix.file.name }}
 
   release:
     needs: package
