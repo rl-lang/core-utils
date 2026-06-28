@@ -16,6 +16,10 @@ jobs:
           - { path: tail/tail.rl, name: tail }
           - { path: grep/grep.rl, name: grep }
           - { path: wc/wc.rl, name: wc }
+          - { path: mv/mv.rl, name: mv }
+          - { path: rm/rm.rl, name: rm }
+          - { path: cp/cp.rl, name: cp }
+
     runs-on: ${{ matrix.os }}
     steps:
       - uses: rl-lang/rl-package@main
