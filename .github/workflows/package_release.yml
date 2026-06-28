@@ -19,6 +19,7 @@ jobs:
           - { path: mv/mv.rl, name: mv }
           - { path: rm/rm.rl, name: rm }
           - { path: cp/cp.rl, name: cp }
+          - { path: rlsh/main.rl, name: rlsh }
 
     runs-on: ${{ matrix.os }}
     steps:
