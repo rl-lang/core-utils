@@ -15,6 +15,7 @@ jobs:
           - { path: head/head.rl, name: head }
           - { path: tail/tail.rl, name: tail }
           - { path: grep/grep.rl, name: grep }
+          - { path: wc/wc.rl, name: wc }
     runs-on: ${{ matrix.os }}
     steps:
       - uses: rl-lang/rl-package@main
