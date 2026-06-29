@@ -1,0 +1,24 @@
+name: RL Check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  rl-check:
+    name: Check src/main.rl
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run RL check
+        uses: rl-lang/rl-check@main
+        with:
+          file:
+            - nano/src/main.rl
+            - nano/src/draw.rl
+            - nano/src/theme.rl
+            - nano/src/rl_highlight.rl
