@@ -1,0 +1,5 @@
+[project]
+name = "test"
+rl-version = "0.1.4"
+version = "0.0.1"
+entry = "src/main.rl"
