@@ -9,16 +9,24 @@ on:
 
 jobs:
   rl-check:
-    name: Check ${{ matrix.file }}
+    name: Check ${{ matrix.folder }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        file:
-          - nano/src/main.rl
-          - nano/src/draw.rl
-          - nano/src/theme.rl
-          - nano/src/rl_highlight.rl
+        folder:
+          - cat
+          - cp
+          - mv
+          - rm
+          - ls
+          - echo
+          - head
+          - tail
+          - grep
+          - wc
+          - rlsh
+          - nano/src
 
     steps:
       - uses: actions/checkout@v4
@@ -26,5 +34,5 @@ jobs:
       - name: Run RL check
         uses: rl-lang/rl-check@main
         with:
-          file: ${{ matrix.file }}
+          folder: ${{ matrix.folder }}
           version: nightly
