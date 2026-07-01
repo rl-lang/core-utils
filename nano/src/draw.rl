@@ -44,7 +44,7 @@ fn draw(arr[string] lines, int cursor_row, int cursor_col, string filename, stri
             term_print(num_str)
             term_reset_color()
             term_print(" ")
-            if (ends_with(filename, ".rl") and false) {
+            if ends_with(filename, ".rl") {
                 highlight(lines[abs_row], kws, types)
             } else {
                 term_print(lines[abs_row])
